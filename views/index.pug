@@ -1,0 +1,25 @@
+extends layout
+
+block content 
+  h2 Current TWIST Schedule
+  hr
+  .row
+    .col-lg-12
+      a.btn.btn-lg.btn-success(href='/twist/session/create', role='button') Create New Session
+
+  if error
+    p Error getting dynamic content.
+  else
+    br
+    p Current number of participants:
+
+    ul
+      li #[strong Participants:] !{data.participantCount}
+      li #[strong High Schools:] !{data.highSchoolCount}
+    
+    
+
+
+
+        
+

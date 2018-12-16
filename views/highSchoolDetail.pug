@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1 #{highSchool.highSchoolName}
+      br
+      h5 #[strong Name:] #{highSchool.highSchoolName}
+      h5 #[strong Address:] #{highSchool.address}
+      
+      br 
+
+      button.btn.btn-primary(onclick='goBack()') Go Back
+      script.
+        function goBack() {
+        window.history.back();
+        }
+    .col-lg-6.right
+      br
+      a.btn.btn-lg.btn-success(href='/twist/highSchool/edit', role='button') Edit this High School 
+      br
+      br
+      a.btn.btn-lg.btn-success(href='/twist/highSchool/delete', role='button') Delete this High School
+  
+  

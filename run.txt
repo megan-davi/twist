@@ -1,0 +1,7 @@
+npm install
+npm install moment
+npm install mongoose
+
+SET DEBUG=twist:* & npm run devstart
+
+localhost:3000

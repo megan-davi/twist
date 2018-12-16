@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1= title
+      h5 Click to view more information about a participant, edit or delete it.
+    .col-lg-6.right
+      a.btn.btn-lg.btn-success(href='/twist/participant/create', role='button') Register new participant
+      
+    
+  br
+  .row
+    .col-lg-12
+      ul
+        each participant in participantList
+          li.horz
+            a(href=participant.url) #{participant.name}
+
+        else
+          li There are no participants.
+
+      

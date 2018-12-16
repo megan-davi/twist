@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1 #{participant.name}
+      br
+      h5 #[strong Name:] #{participant.name}
+      h5 #[strong Address:] #{participant.address}
+      h5 #[strong Email:] #{participant.email}
+      h5 #[strong Participant Type:] #{participant.participantType}
+      h5 #[strong School:] a(href=participant.url) #{participant.highSchoolName}
+      
+      br
+
+      button.btn.btn-primary(onclick='goBack()') Go Back
+      script.
+        function goBack() {
+        window.history.back();
+        }
+    .col-lg-6.right
+      br
+      a.btn.btn-lg.btn-success(href='/twist/participant/edit', role='button') Edit this Participant 
+      br
+      br
+      a.btn.btn-lg.btn-success(href='/twist/participant/delete', role='button') Delete this Participant

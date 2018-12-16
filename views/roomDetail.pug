@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1 Room #{room.roomNumber}
+      br
+      h5 #[strong Room Number:] #{room.roomNumber}
+      h5 #[strong Building:] #{room.building}
+      h5 #[strong Capacity:] #{room.capacity}
+      br
+
+      button.btn.btn-primary(onclick='goBack()') Go Back
+      script.
+        function goBack() {
+        window.history.back();
+        }
+    .col-lg-6.right
+      br
+      a.btn.btn-lg.btn-success(href='/twist/room/edit', role='button') Edit this Room
+      br
+      br
+      a.btn.btn-lg.btn-success(href='/twist/room/delete', role='button') Delete this Room

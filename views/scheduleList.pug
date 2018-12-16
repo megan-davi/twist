@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1= title
+      h5 Click to view more information about a schedule, edit or delete it.
+    .col-lg-6.right
+      a.btn.btn-lg.btn-success(href='/twist/schedule/create', role='button') Create new Schedule
+
+  br
+  .row
+    .col-lg-12
+      ul
+        each schedule in scheduleList
+          li.horz
+            a(href=schedule.url) #{schedule.room}
+
+        else
+          li There are no schedules.

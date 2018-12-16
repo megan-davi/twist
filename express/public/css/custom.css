@@ -1,0 +1,13 @@
+* {
+  font-family: 'Karma', serif;
+}
+
+body {
+  background-color: #DFF1F4;
+}
+
+.form-control {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}

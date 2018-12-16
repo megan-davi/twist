@@ -1,0 +1,61 @@
+doctype html
+html(lang='en')
+  head
+    title TWIST Homepage
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+  body
+      .container
+        .header.clearfix
+          nav
+            ul.nav.nav-pills.float-right
+              li.nav-item
+                a.nav-link(href='/twist') Home 
+              li.nav-item
+                a.nav-link(href='/twist/highSchool') HS List
+              li.nav-item
+                a.nav-link(href='/twist/participant') Participant List
+              li.nav-item
+                a.nav-link(href='/twist/presenter') Presenter List
+              li.nav-item
+                a.nav-link(href='/twist/topic') Topic Info
+              li.nav-item
+                a.nav-link(href='/twist/room') Room Info
+          br
+          br
+          h3.text-muted TWIST Admin Panel
+        .jumbotron
+          img(src='/images/twist.png')
+          br
+          br
+          .row.intro
+            .col-lg-12
+              h4
+                | TWIST, or Teen Women in Science and Technology, is a one-day conference to expose teen women across the state to various career possibilities. TWIST was developed by K-State Polytechnic and the Salina community more than 25 years ago. TWIST is open to any young woman in ninth through 12th grade. K-State Polytechnic encourages high school sponsors or organizers to register students. Students must register individually to choose their top five career sessions.
+              br
+            .col-lg-6
+              h4
+                | Thursday, Jan. 10, 2019
+              h4
+                | 8:30 a.m. - 1 p.m.
+              h4
+                | K-State Polytechnic Campus
+              h4 
+                | Salina, Kansas
+            .col-lg-6
+              br
+              a.btn.btn-lg.btn-success(href='/twist/participant/create', role='button') Sign up today
+        br
+        block content
+        br
+        br
+        hr 
+        footer.footer
+          p Website layout © Bootstrap; Image © K-State Polytechnic
+          

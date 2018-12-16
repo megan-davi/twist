@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 #{title}: #{participant.name}
+
+    div(style='margin-left:20px;margin-top:20px')
+
+
+    p Do you really want to delete this Author?
+
+    form(method='POST' action='')
+      div.form-group
+        input#participantid.form-control(type='hidden',name='participantid', required='true', value=participant._id )
+
+      button.btn.btn-primary(type='submit') Delete

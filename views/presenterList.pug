@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1= title
+      h5 Click to view more information about a presenter, edit or delete it.
+    .col-lg-6.right
+      a.btn.btn-lg.btn-success(href='/twist/presenter/create', role='button') Create new presenter
+
+
+  br
+  .row
+    .col-lg-12
+      ul
+        each presenter in presenterList
+          li.horz
+            a(href=presenter.url) #{presenter.name}
+
+        else
+          li There are no presenters.

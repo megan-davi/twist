@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .row
+    .col-lg-6
+      h1 #{presenter.name}
+      br
+      h5 #[strong Name:] #{presenter.name}
+      h5 #[strong Occupation:] #{presenter.occupation}
+      h5 #[strong Phone:] #{presenter.mainPhone}
+
+      br
+
+      button.btn.btn-primary(onclick='goBack()') Go Back
+      script.
+        function goBack() {
+        window.history.back();
+        }
+    .col-lg-6.right
+      br
+      a.btn.btn-lg.btn-success(href='/twist/presenter/edit', role='button') Edit this Presenter 
+      br
+      br
+      a.btn.btn-lg.btn-success(href='/twist/presenter/delete', role='button') Delete this Presenter
+
+

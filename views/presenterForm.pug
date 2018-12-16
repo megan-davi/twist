@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  br
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='firstName') First Name:
+      input#firstName.form-control(type='text', placeholder='First Name' name='firstName' required='true' value=(undefined===presenter ? '' : presenter.firstName) )
+    div.form-group
+      label(for='lastName') Last Name:
+      input#lastName.form-control(type='text', placeholder='Last Name' name='lastName' required='true' value=(undefined===presenter ? '' : presenter.lastName) )
+    div.form-group
+      label(for='occupation') Occupation:
+      input#occupation.form-control(type='text', placeholder='Occupation' name='occupation' required='false' value=(undefined===presenter ? '' : presenter.occupation) )
+    div.form-group
+      label(for='mainPhone') Phone Number:
+      input#mainPhone.form-control(type='text', placeholder='Phone Number' name='mainPhone' required='false' value=(undefined===presenter ? '' : presenter.mainPhone) )
+    
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

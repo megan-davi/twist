@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 #{title}: #{highSchool.highSchoolName}
+    p Do you really want to delete this High School?
+
+    form(method='POST' action='')
+      div.form-group
+        input#highschoolid.form-control(type='hidden',name='highschoolid', required='true', value=highSchool._id )
+
+      button.btn.btn-primary(type='submit') Delete
